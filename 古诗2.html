@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古诗朗读</title>
+
+
+    <style>
+        .background-image {
+            background: url(img/3.jpg) center/cover;
+            opacity: 0.3;
+            width: 1860px;
+            height: 1800px;
+        }
+
+        #text1 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: rgb(230, 1, 255);
+            align-items: center;
+            font-size: 18px;
+           line-height: 2;
+            
+        }
+
+        .Box{
+            display: inline-block;
+        }
+        
+       a{
+        text-decoration: none;
+       }
+    </style>
+    
+    
+
+
+
+
+
+</head>
+
+<body>
+    <!-- 音乐资源 -->
+    <audio id="music1">
+        <source src="music/诗酒换月光（伴奏）.mp3" type="audio/ogg">
+    </audio>
+    <audio id="music2">
+        <source src="music/女儿情.mp3" type="audio/ogg">
+    </audio>
+    <!-- 朗读按钮 -->
+        <div class="Box k"><img src="https://ziyuan.guwendao.net/siteimg/speak-erOk.png" alt="wu" height="16" width="16"onclick="speakParagraphs()"></div>
+
+    <div class="Box message"><button style="color: rgb(0, 38, 255);" type="button" onclick="user()">使用说明</button></div>
+    <div class="Box a"><button style="color: rgb(255, 119, 0);" onclick="playmusic()" ondblclick="pausemusic()" type="button">诗酒换月光（伴奏）</button></div>
+    <div class="Box b"><button style="color: rgb(85, 0, 255);" onclick="playmusic1()" ondblclick="pausemusic1()">女儿情（伴奏）</button></div>
+    
+     
+   
+        <!-- 背景 -->
+    <div class="background-image"></div>
+
+    <p id="text1">
+
+        　　责人之心责己，恕己之心恕人。<br>
+
+　　守口如瓶，防意如城。<br>
+
+　　宁可人负我，切莫我负人。<br>
+
+　　再三须慎意，第一莫欺心。<br>
+
+　　虎身犹可近，人毒不堪亲。<br>
+
+　　来说是非者，便是是非人。<br>
+
+　　远水难救近火，远亲不如近邻。<br>
+
+　　有茶有酒多兄弟，急难何曾见一人？<br>
+
+　　人情似纸张张薄，世事如棋局局新。<br>
+
+　　山中也有千年树，世上难逢百岁人。<br>
+
+　　力微休负重，言轻莫劝人。<br>
+
+　　无钱休入众，遭难莫寻亲。<br>
+
+　　平生不做皱眉事，世上应无切齿人。<br>
+
+　　士者国之宝，儒为席上珍。<br><br>
+
+　　若要断酒法，醒眼看醉人。<br>
+
+　　求人须求大丈夫，济人须济急时无。<br>
+
+　　渴时一滴如甘露，醉后添杯不如无。<br>
+
+　　久住令人贱，频来亲也疏。<br>
+
+　　酒中不语真君子，财上分明大丈夫。<br>
+
+　　出家如初，成佛有余。<br>
+
+　　积金千两，不如明解经书。<br>
+
+　　养子不教如养驴，养女不教如养猪。<br>
+
+　　有田不耕仓廪虚，有书不读子孙愚。<br>
+
+　　仓廪虚兮岁月乏，子孙愚兮礼仪疏。<br>
+
+　　听君一席话，胜读十年书。<br>
+
+　　人不通今古，马牛而襟裾。<br>
+
+　　茫茫四海人无数，哪个男儿是丈夫？<br>
+
+　　白酒酿成缘好客，黄金散尽为收书。<br>
+
+　　救人一命，胜造七级浮屠。<br>
+
+　　城门失火，殃及池鱼。<br>
+
+　　庭前生瑞草，好事不如无。<br>
+
+　　欲求生富贵，须下死工夫。<br>
+
+　　百年成之不足，一旦败之有余。<br>
+
+　　人心似铁，官法如炉。<br>
+
+　　善化不足，恶化有余。<br>
+
+　　水至清则无鱼，人太急则无智。<br>
+
+　　知者减半，愚者全无。<br>
+
+　　在家由父，出嫁从夫。<br>
+
+　　痴人畏妇，贤女敬夫。<br>
+
+　　是非终日有，不听自然无。<br>
+
+　　宁可正而不足，不可邪而有余。<br>
+
+　　宁可信其有，不可信其无。<br>
+
+　　命里有时终须有，命里无时莫强求。<br>
+
+　　道院迎仙客，书堂隐相儒。<br>
+
+　　庭栽栖凤竹，池养化龙鱼。<br>
+
+　　结交须胜己，似我不如无。<br>
+
+　　但看三五日，相见不如初。<br>
+
+　　人情似水分高下，世事如云任卷舒。<br>
+    
+　　知足常足，终身不辱；<br>
+
+
+
+
+    </p>
+
+
+
+
+
+
+
+
+    <script>
+        function speakParagraphs() {
+            // 获取两个段落的文本内容  
+            var text1 = document.getElementById('text1').textContent;
+
+
+            // 合并两个段落的文本，以便连续朗读  
+            var combinedText = text1
+
+            // 检查浏览器是否支持语音合成  
+            if (!('speechSynthesis' in window)) {
+                alert('您的浏览器不支持语音合成功能。');
+                return;
+            }
+
+            // 创建一个新的SpeechSynthesisUtterance实例  
+            var utterance = new SpeechSynthesisUtterance(combinedText);
+
+            // 使用语音合成接口朗读文本  
+            window.speechSynthesis.speak(utterance);
+        }  
+    </script>
+
+    <script>
+    var audio=document.getElementById("music1")
+    function playmusic(){
+        audio.play();
+    }
+    function pausemusic(){
+        audio.pause();
+    }
+        </script>
+
+<script>
+    var audio1=document.getElementById("music2")
+    function playmusic1(){
+        audio1.play();
+    }
+    function pausemusic1(){
+        audio1.pause();
+    }
+        </script>
+<script>
+    function user(){
+        alert("点击播放音频按钮，开始朗读，单击播放音乐，双击暂停，可同时播放文本音频和背景音乐(不建议两个音乐一起放虽然也能放，好了只想到这么多了\n-------作者：🌈༺ཌ༈落下的忧愁༈ད༻)")
+    }
+</script>
+
+
+
+<!-- <div class="next"><a href="古诗3.html">下一页</a></div> -->
+</body>
+
+</html>

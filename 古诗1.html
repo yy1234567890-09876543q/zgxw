@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古诗朗读</title>
+
+
+    <style>
+        .background-image {
+            background: url(img/3.jpg) center/cover;
+            opacity: 0.3;
+            width: 1860px;
+            height: 1800px;
+        }
+
+        #text1 {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: rgb(230, 1, 255);
+            align-items: center;
+            font-size: 18px;
+           line-height: 2;
+            
+        }
+
+        .Box{
+            display: inline-block;
+        }
+        
+       a{
+        text-decoration: none;
+       }
+    </style>
+    
+    
+
+
+
+
+
+</head>
+
+<body>
+    <!-- 音乐资源 -->
+    <audio id="music1">
+        <source src="music/诗酒换月光（伴奏）.mp3" type="audio/ogg">
+    </audio>
+    <audio id="music2">
+        <source src="music/女儿情.mp3" type="audio/ogg">
+    </audio>
+    <!-- 朗读按钮 -->
+        <div class="Box k"><img src="https://ziyuan.guwendao.net/siteimg/speak-erOk.png" alt="wu" height="16" width="16"onclick="speakParagraphs()"></div>
+
+    <div class="Box message"><button style="color: rgb(255, 0, 0);" type="button" onclick="user()">使用说明</button></div>
+    <div class="Box a"><button style="color: rgb(255, 119, 0);" onclick="playmusic()" ondblclick="pausemusic()" type="button">诗酒换月光（伴奏）</button></div>
+    <div class="Box b"><button style="color: rgb(85, 0, 255);" onclick="playmusic1()" ondblclick="pausemusic1()">女儿情（伴奏）</button></div>
+    
+     
+   
+        <!-- 背景 -->
+    <div class="background-image"></div>
+
+    <p id="text1">
+
+        　　知己知彼，将心比心。<br>
+
+        　　集韵增广，多见多闻。<br>
+
+        　　昔时贤文，诲汝谆谆。<br>
+
+        　　观今宜鉴古，无古不成今。<br>
+
+        　　知己知彼，将心比心。<br>
+
+        　　酒逢知己饮，诗向会人吟。<br>
+
+        　　相识满天下，知心能几人？<br>
+
+        　　相逢好似初相识，到老终无怨恨心。<br>
+
+        　　近水知鱼性，近山识鸟音。<br>
+
+        　　易涨易退山溪水，易反易覆小人心。<br>
+
+        　　运去金成铁，时来铁似金。<br>
+
+        　　读书须用意，一字值千金。<br>
+
+        　　逢人且说三分话，未可全抛一片心。<br>
+
+        　　有意栽花花不发，无心插柳柳成荫。<br>
+
+        　　画虎画皮难画骨，知人知面不知心。<br>
+
+        　　钱财如粪土，仁义值千金。<br>
+
+        　　流水下滩非有意，白云出岫本无心。<br>
+
+        　　当时若不登高望，谁信东流海洋深？<br>
+
+        　　路遥知马力，日久见人心。<br>
+
+        　　两人一般心，无钱堪买金；<br>
+
+        　　一人一般心，有钱难买针。<br>
+
+        　　相见易得好，久住难为人。<br>
+
+        　　马行无力皆因瘦，人不风流只为贫。<br>
+
+        　　饶人不是痴汉，痴汉不会饶人。<br>
+        　　是亲不是亲，非亲却是亲。<br>
+
+        　　美不美，乡中水；亲不亲，故乡人。<br>
+
+        　　莺花犹怕春光老，岂可教人枉度春？<br>
+
+        　　相逢不饮空归去，洞口桃花也笑人。<br>
+
+        　　红粉佳人休使老，风流浪子莫教贫。<br>
+
+        　　在家不会迎宾客，出门方知少主人。<br>
+
+        　　黄芩无假，阿魏无真。<br>
+
+        　　客来主不顾，自是无良宾。<br>
+
+        　　良宾方不顾，应恐是痴人。<br>
+
+        　　贫居闹市无人问，富在深山有远亲。<br>
+
+        　　谁人背后无人说，哪个人前不说人？<br>
+
+        　　有钱道真语，无钱语不真。<br>
+
+
+        　　闹里挣钱，静处安身。<br>
+
+        　　来如风雨，去似微尘。<br>
+
+        　　长江后浪推前浪，世上新人赶旧人。<br>
+
+        　　近水楼台先得月，向阳花木早逢春。<br>
+
+        　　古人不见今时月，今月曾经照古人。<br>
+
+        　　先到为君，后到为臣。<br>
+
+        　　莫道君行早，更有早行人。<br>
+
+        　　莫信直中直，须防仁不仁。<br>
+
+        　　山中有直树，世上无直人>。<br>
+
+        　　自恨枝无叶，莫怨太阳偏。<br>
+
+        　　一切都是命，半点不由人。<br>
+
+        　　一年之计在于春，一日之计在于寅。<br>
+
+        　　一家之计在于和，一生之计在于勤。<br>
+
+
+
+
+
+    </p>
+
+
+
+
+<!-- 52句话 -->
+
+
+
+    <script>
+        function speakParagraphs() {
+            // 获取两个段落的文本内容  
+            var text1 = document.getElementById('text1').textContent;
+
+
+            // 合并两个段落的文本，以便连续朗读  
+            var combinedText = text1
+
+            // 检查浏览器是否支持语音合成  
+            if (!('speechSynthesis' in window)) {
+                alert('您的浏览器不支持语音合成功能。');
+                return;
+            }
+
+            // 创建一个新的SpeechSynthesisUtterance实例  
+            var utterance = new SpeechSynthesisUtterance(combinedText);
+
+            // 使用语音合成接口朗读文本  
+            window.speechSynthesis.speak(utterance);
+        }  
+    </script>
+
+    <script>
+    var audio=document.getElementById("music1")
+    function playmusic(){
+        audio.play();
+    }
+    function pausemusic(){
+        audio.pause();
+    }
+        </script>
+
+<script>
+    var audio1=document.getElementById("music2")
+    function playmusic1(){
+        audio1.play();
+    }
+    function pausemusic1(){
+        audio1.pause();
+    }
+        </script>
+<script>
+    function user(){
+        alert("点击播放音频按钮，开始朗读，单击播放音乐，双击暂停，可同时播放文本音频和背景音乐(不建议两个音乐一起放虽然也能放，好了只想到这么多了\n-------作者：🌈༺ཌ༈落下的忧愁༈ད༻)")
+    }
+</script>
+
+
+
+<div class="next"><a href="古诗2.html">下一页</a></div>
+</body>
+
+</html>
