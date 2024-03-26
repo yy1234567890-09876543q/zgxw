@@ -5,6 +5,13 @@
     <title>Document</title>
 </head>
 <style>
+    #sor{
+        color: rgb(255, 0, 166);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 80px;
+    }
     html,body{
         height: 100%;
     }
@@ -15,12 +22,12 @@
         background:url("https://img-baofun.zhhainiao.com/pcwallpaper_ugc/static/e46bb051e1e0059c43ec0e8ff6d99d33.png?x-oss-process=image%2fresize%2cm_lfit%2cw_1920%2ch_1080")no-repeat center/cover;
     }
     #login_box{
-        width: 300px;
-        height: 400px;
-        margin-top: 20px;
+        width: 400px;
+        height: 600px;
+        margin-top: 40px;
         text-align: center;
         border: solid;
-        border-radius: 1000px;
+        border-radius: 100px;
         background-color: rgba(16, 16, 186, 0.3);
     }
     a{
@@ -42,13 +49,13 @@
     input{
         border: 0;
         width: 60%;
-        font-size: 17px;
+        font-size: 20px;
         color: blueviolet;
         background-color: transparent;
         border-bottom: 2px solid cyan;
         outline: none;
         padding: 10px;
-        margin-top: 10px;
+        margin-top: 50px;
     }
     button{
         width: 150px;
@@ -65,9 +72,11 @@
     <div id="login_box">
         <form action="" id="input_box" onsubmit="return validateForm()">
             <h2>Login</h2>
+            <h4 style="color: bisque;">----内容节选自<em><mark><a href="https://so.gushiwen.cn/guwen/bookv_46653FD803893E4F90801E8CEAA9581A1FE69342BFFDEC7F.aspx">《增广贤文》</a></mark></em></h4>
             <input type="text" name="username" id="username" placeholder="用户名：落下的忧愁">
             <input type="password" name="password" id="password" placeholder="密码：123456"><br>
             <button type="submit">登录</button>
+            <a id="sor" href="https://www.douyin.com/user/MS4wLjABAAAAKu0BZWJzkXc2fh8zumzvqnrhpLb0YBhu33JhfRnKc4jCzys3VHnXQqxLIPIuDPBr">点我了解作者详情</a>
         </form>
     </div>
 
@@ -78,7 +87,7 @@
             
             // 在这里添加你的验证逻辑
             if (username === "落下的忧愁" && password === "123456") {
-                window.location.href = "index1.html"; // 登录成功后跳转到古诗1.html页面
+                window.location.href = "古诗1.html"; // 登录成功后跳转到古诗1.html页面
                 return false; // 阻止表单提交
             } else {
                 alert("用户名或密码不正确");
